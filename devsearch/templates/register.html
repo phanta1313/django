@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+   
+    <form method="POST" action="{% url 'registerUser' %}" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Sign Up">
+    </form>
+
+    <p>Already have an account? <a href="{% url 'loginUser' %}">Sign In</a></p>
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
