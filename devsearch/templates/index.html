@@ -4,20 +4,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
+        
+        body {
+          background: #6ED0F6;
+          color: #fff;
+          font-family: 'Raleway', sans-serif;
+          -webkit-font-smoothing: antialiased;
+        }
+        .main_page {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-top:50px ;
+        }
+        
+      </style>
     <title>Main Page</title>
 
 </head>
 <body>
     {% include 'navbar.html' %}
-    <p>Main Page</p>
+  <div class="main_page">
+    <h1>Main page</h1>
     {% if messages %}
-    <ul class="messages">
+   
         {% for message in messages %}
-        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        <h1{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h1>
         {% endfor %}
-    </ul>
+    
     {% endif %}
+  </div>
 
 </body>
 </html>
