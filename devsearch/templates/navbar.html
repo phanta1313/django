@@ -4,27 +4,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        @import url(http://fonts.googleapis.com/css?family=Raleway:700,800);
       
    
-        .navbar {
-            
-            color: #fff;
-          
-            display: flex;
-            justify-content: space-around;
-        }
-        #navbar_a{
-          text-decoration: none;
-          color: #ffff;
-          font-family: 'Raleway', sans-serif;
-          font-size: 40px;
-        }
+       .navbar {
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+        
+        color: white;
+       }
+       #navbar_a{
+        text-decoration: none;
+        color: #ffff;
+       }
    
       </style>
     <title>navbar</title>
 </head>
-{% block content%}
+
 <body>
     <br>
     <div class="navbar">
@@ -37,5 +34,5 @@
     <a id="navbar_a" href="{% url 'registerUser' %}"> Registration</a>
 </div>
 </body>
-{% endblock content %}
+
 </html>
