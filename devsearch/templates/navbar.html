@@ -1,29 +1,16 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      
-   
-       .navbar {
-        display: flex;
-        justify-content: space-around;
-        font-size: 50px;
-        
-        color: white;
-       }
-       #navbar_a{
-        text-decoration: none;
-        color: #ffff;
-       }
-   
-      </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     <title>navbar</title>
 </head>
 
 <body>
-    <br>
+    {% block content %}
     <div class="navbar">
     <a id="navbar_a" href="/">Main page</a>
     {% if request.user.is_authenticated %}
@@ -33,6 +20,7 @@
     {% endif %}
     <a id="navbar_a" href="{% url 'registerUser' %}"> Registration</a>
 </div>
+{% endblock content %}
 </body>
 
 </html>
