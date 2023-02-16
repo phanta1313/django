@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    {% block content %}
+   
     <div class="navbar">
     <a id="navbar_a" href="/">Main page</a>
     {% if request.user.is_authenticated %}
@@ -20,7 +20,7 @@
     {% endif %}
     <a id="navbar_a" href="{% url 'registerUser' %}"> Registration</a>
 </div>
-{% endblock content %}
+
 </body>
 
 </html>

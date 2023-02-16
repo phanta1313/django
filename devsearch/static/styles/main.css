@@ -1,91 +1,9 @@
-body {
-	background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3));
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: sans-serif;
+#navbar_a{
+    color: grey;
+    font-size: 60px ;
 }
 
-.navbar {
+.navbar{
     display: flex;
     justify-content: space-around;
-    font-size: 50px;
-    color: white;
-   }
-#navbar_a{
-    text-decoration: none;
-    color: white;
-   }
-   .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-      padding-top: 100px;
-      
-  }
-  
-  .form h1 {
-  
-  
-      text-align: center;
-      color: #fff;
-      font-size: 30px;
-      text-transform: uppercase;
-  }
-  
-  .input-form {
-      padding: 20px;
-      text-align: center;
-  }
-  
-  .input-form input {
-      padding: 10px;
-      width: 100%;
-      color: #fff;
-      font-size: 20px;
-      background: none;
-      outline: none;
-      border: 1px solid #fff;
-      box-sizing: border-box;
-  }
-  
-  .input-form input[type="text"]:focus, .input-form input[type="password"]:focus {
-      border: 1px solid #0fc3f5;
-  }
-  
-  .input-form input[type="submit"] {
-  
-      color: #fff;
-      font-weight: bold;
-      text-transform: uppercase;
-      border: none;
-      background: #0fc3f5;
-      transition: .3s;
-      padding: 15px;
-  }
-  
-  .input-form input[type="submit"]:hover {
-      background: #4442db;
-  
-  }
-  
-  .form a {
-      display: block;
-      padding: 0 0 30px;
-      text-align: center;
-      color: #fff;
-      text-decoration: none;
-      transition: .3s;
-  }
-  
-  .form a:hover {
-      color: #0fc3f5;
-  }
-  form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(0,0,0,.7);
-      padding: 50px;
-  }
+}
