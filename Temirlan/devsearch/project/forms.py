@@ -7,5 +7,6 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username','password1','password2']
+        images = ['Vector.svg','pass.svg']
         
         

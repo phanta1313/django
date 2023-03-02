@@ -39,14 +39,13 @@ def logoutUser(request):
 def registerUser(request):
     form = CustomUserCreationForm()
     context = {'form':form}
-    
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
            form.save()
            messages.success(request,'User has been created')
            username = form.cleaned_data['username']
-           password = form.cleaned_data['password1']
+           password = form.cleaned_data['password']
            user = authenticate(username=username, password=password)
            login(request, user)
            return redirect('/')

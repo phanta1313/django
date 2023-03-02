@@ -10,6 +10,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Inter;
+    background-color: #2D2D2D;
     
 }
 
@@ -18,15 +19,14 @@ body, html {
 }
 
 .login{
-    
-    margin: 0 auto;
+    margin: 5% auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: #fff;
-    max-width: 1920px;
-    padding: 9.9% 0;
+    max-width: 500px;
+    padding: 4% 0;
     
     
 }
@@ -46,11 +46,6 @@ h1{
     flex-direction: row;
 }
 
-.form{
-    padding-left: 10%;
-    position: relative;
-}
-
 .form h2{
     margin: 30px 100px;
     font-size: 30px;
@@ -59,7 +54,7 @@ h1{
 }
 
 .input-form{
-    margin: 15px 40px;
+    margin: 15px 70px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -114,17 +109,18 @@ h1{
     font-size: 14px;
     background-color: none;
     box-sizing: border-box;
-    border-radius: 20px;
-    border: 1px solid black;
-    
+    border: none;
+    border-bottom:1px solid #454444;
 }
 
 .input-form input:focus, .input-form input:focus{
-    border: 1px solid black;
+    border: none;
+    outline: none;
+    border-bottom:1px solid #454444;
 }
 
 .input-form-submit input[type="submit"]{
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 10px;
     width: 230px;
     box-sizing: border-box;
@@ -133,12 +129,37 @@ h1{
     border-radius: 30px;
     border: none;
     font-weight: bold;
-    margin-left: 30%;
+    margin-left: 27%;
 }
 .input-form-submit input[type="submit"]:hover{
     background-color: rgb(73, 71, 71);
     cursor: pointer;
-    transition: 0.2s ease-in-out 0.2s;
+    transition: 0.1s;
+}
+.input-name{
+    display: flex;
+
+   margin-left: 15%;
+}
+.input-name img{
+    width: 15px;
+    margin-right: 1%;
+}
+
+
+.icons{
+    max-width: 300px;
+    margin-top: 5%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons img{
+    width: 50px;
+}
+.icons img:hover{
+    cursor: pointer;
 }
 
 .forgotPassword{
@@ -424,8 +445,6 @@ form {
         color: red;
         font-style: italic;
         font-size: 20px;
-     
+      margin-left: 35%;
        
     }
-
-    
