@@ -1,0 +1,14 @@
+Django
+djangorestframework
+django-model-utils
+psycopg2-binary
+psycopg2
+Pillow
+django-filter
+djangorestframework-simplejwt
+drf-yasg
+mock
+pyyaml
+uritemplate
+django
+django-rest-swagger
