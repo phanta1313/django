@@ -9,8 +9,8 @@ from .serial import categorySerial
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.forms import model_to_dict
+from .models import *
 
-from .models import category
 
 
 class CategoryAPI(generics.ListAPIView):
@@ -66,7 +66,9 @@ def registerUser(request):
 
 
 def main(request):
-    return render(request, 'index.html')
+    user = request.user
+    context = {'price_sum': price_sum, 'user': user}
+    return render(request, 'index.html', context)
 
 
 
