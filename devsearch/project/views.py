@@ -10,6 +10,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.forms import model_to_dict
 from .models import *
+from .forms import *
 
 
 
@@ -67,7 +68,14 @@ def registerUser(request):
 
 def main(request):
     user = request.user
-    context = {'price_sum': price_sum, 'user': user}
+    
+    form = SaveProdForm()
+    if request.method == 'POST':
+        form = SaveProdForm(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    context = {'price_sum': price_sum, 'user': user, 'form': form}
     return render(request, 'index.html', context)
 
 

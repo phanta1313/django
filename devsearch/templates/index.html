@@ -24,6 +24,15 @@
     <br>
     <p><a href="">Total sum - {{price_sum.product_price__sum}} som for a user '{{user}}'</a></p>
   </div>
+<br><br>
+  <div class="createProd">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" name="Add product to basket">
+    </form>
+  </div>
+
 
 
   <!--<div class="massage">
